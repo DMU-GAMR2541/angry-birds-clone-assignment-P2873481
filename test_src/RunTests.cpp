@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
+#include "Slingshot.h"
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
