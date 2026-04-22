@@ -41,6 +41,22 @@ protected:
 
 };
 
+class ParamTest : public::testing::TestWithParam<int> {
+protected:
+    ParamTest() = default;
+    ~ParamTest() = default;
+
+    void SetUp() override {
+        // Code here will be called immediately after the constructor (right
+        // before each test).
+
+    }
+
+    void TearDown() override {
+
+    }
+};
+
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
