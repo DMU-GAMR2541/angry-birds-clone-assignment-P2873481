@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/f48c6537d1d393d49f8ad1e95683897d/googletest-populate.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/efe82473006e25ee09500ee5def655a0/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-build.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-download.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-install.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-test.rule"
+		},
+		{
+			"file" : "H:/Documents/GitHub/angry-birds-clone-assignment-P2873481/Build/_deps/googletest-subbuild/CMakeFiles/1403c0165b5c79259d6b4f8c2fa615b7/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}

@@ -43,9 +43,11 @@ protected:
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
-    EXPECT_GT(e.getHealth(), 100);
-    SUCCEED() << "Test test passed";
-    FAIL() << "Test didn't pass";
+    std::cout << e.getHealth() << " " << 100 << std::endl;
+    //EXPECT_GT(e.getHealth(), 100);
+    EXPECT_EQ(e.getHealth(), 100);
+    /*SUCCEED() << "Test test passed";
+    FAIL() << "Test didn't pass";*/
 }
 
 TEST_F(EnemyTest, LethalDamagePopsPig) {
