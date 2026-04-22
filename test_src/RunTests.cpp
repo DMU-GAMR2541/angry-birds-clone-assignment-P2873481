@@ -72,6 +72,17 @@ TEST_F(EnemyTest, LethalDamagePopsPig) {
     EXPECT_TRUE(enemy->checkIfPopped());
 }
 
+TEST_P(ParamTest, SimpleTest) {
+        int i_test = GetParam();
+        std::cout << "Param value:: " << i_test << std::endl;
+        EXPECT_GT(i_test, 1);
+    }
+
+INSTANTIATE_TEST_SUITE_P(
+    Simple,
+    ParamTest, ::testing::Values(1, 2, 3, 4, 5)
+);
+
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
