@@ -5,4 +5,6 @@ class StaticObject {
 public:
 	void Render(sf::RenderWindow& window);
 	void Update();
+private:
+
 };

@@ -332,8 +332,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Bird.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Catapult.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\DynamicObject.h" />
     <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Enemy.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\GameObject.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Noninteractible.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Pig.h" />
     <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Slingshot.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\StaticObject.h" />
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\UI.h" />
+    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\src\DynamicObject.cpp" />
+    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\src\StaticObject.cpp" />
     <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\test_src\RunTests.cpp" />
   </ItemGroup>
   <ItemGroup>

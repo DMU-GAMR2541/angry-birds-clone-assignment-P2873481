@@ -1,42 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\src\DynamicObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\src\StaticObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\DynamicObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\StaticObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Bird.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Catapult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\DynamicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Noninteractible.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Pig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\Slingshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\GameObject.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\StaticObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\DynamicObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\StaticObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Bird.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Pig.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\Catapult.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\UI.h">
+    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-P2873481\include\UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
