@@ -2,6 +2,7 @@
 #include <box2d/box2d.h>
 #include <iostream>
 #include "Bird.h"
+#include "Pig.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -93,7 +94,8 @@ int main() {
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
     // Creating the first new DynamicObject
-    Bird BirdObject(world, "../assets/Ang_Birds/YellowBird.png", sf::Vector2f(500.0f, 200.0f), 0.4);
+    Bird BirdObject(world, "../assets/Ang_Birds/YellowBird.png", sf::Vector2f(250.0f, 200.0f), 0.4);
+    Pig PigObject(world, "../assets/Ang_Birds/BasePig.png", sf::Vector2f(650.0f, 550.0f), 1.0);
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -127,6 +129,7 @@ int main() {
         sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));
 
         BirdObject.Update();
+        PigObject.Update();
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
@@ -144,6 +147,7 @@ int main() {
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
         BirdObject.Render(window);
+        PigObject.Render(window);
 
         window.display();
     }
