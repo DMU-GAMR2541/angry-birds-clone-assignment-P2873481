@@ -1,7 +1,7 @@
 #pragma once
 #include "GameObject.h"
 
-class StaticObject : virtual private GameObject {
+class StaticObject : virtual public GameObject {
 public:
 	StaticObject() = default;
 

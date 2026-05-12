@@ -1,6 +1,6 @@
 #include "DynamicObject.h"
 
-DynamicObject::DynamicObject(b2World& world, std::string str, sf::Vector2f pos) {
+DynamicObject::DynamicObject(b2World& world, std::string str, sf::Vector2f pos, float mass) {
 	BodyDef.type = b2_dynamicBody;
 	BodyDef.position = b2Vec2(pos.x / scale, pos.y / scale);
 	Body = world.CreateBody(&BodyDef);
@@ -17,7 +17,7 @@ DynamicObject::DynamicObject(b2World& world, std::string str, sf::Vector2f pos) 
 	BodyShape.m_radius = (texture.getSize().x / 2.0f) / scale;
 
 	FixtureDef.shape = &BodyShape;
-	FixtureDef.density = 1.0f;
+	FixtureDef.density = mass;
 	FixtureDef.friction = 0.3f;
 	FixtureDef.restitution = 0.5f;
 

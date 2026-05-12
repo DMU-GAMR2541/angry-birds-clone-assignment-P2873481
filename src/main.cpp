@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
 #include <iostream>
-#include "DynamicObject.h"
+#include "Bird.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -93,7 +93,7 @@ int main() {
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
     // Creating the first new DynamicObject
-    DynamicObject BaseObject(world, "../assets/Ang_Birds/YellowBird.png", sf::Vector2f(500.0f, 500.0f));
+    Bird BirdObject(world, "../assets/Ang_Birds/YellowBird.png", sf::Vector2f(500.0f, 200.0f), 0.4);
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -126,7 +126,7 @@ int main() {
         sf_ballVisual.setPosition(b2_ballBody->GetPosition().x * SCALE, b2_ballBody->GetPosition().y * SCALE);
         sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));
 
-        BaseObject.Update();
+        BirdObject.Update();
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
@@ -143,7 +143,7 @@ int main() {
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
-        BaseObject.Render(window);
+        BirdObject.Render(window);
 
         window.display();
     }

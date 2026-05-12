@@ -1,10 +1,12 @@
 #pragma once
 #include "GameObject.h"
 
-class DynamicObject : virtual private GameObject {
+class DynamicObject : virtual public GameObject {
 public:
 	DynamicObject() = default;
-	DynamicObject(b2World& world, std::string str, sf::Vector2f pos);
+	DynamicObject(b2World& world, std::string str, sf::Vector2f pos, float mass);
+
+	~DynamicObject() = default;
 
 	void Render(sf::RenderWindow& window) override;
 	void Update() override;
