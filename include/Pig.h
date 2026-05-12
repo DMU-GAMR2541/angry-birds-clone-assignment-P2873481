@@ -4,5 +4,5 @@
 class PigObject {
 private:
 	int PigHP;
-
+	
 };

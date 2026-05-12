@@ -1,7 +1,12 @@
 #pragma once
 #include "DynamicObject.h"
 
-class BirdObject {
+class Bird : public DynamicObject {
+public:
+	Bird() = default;
+	Bird(b2World& world, std::string str, sf::Vector2f pos) : DynamicObject(world, str, pos) {
+	}
 private:
-	int BirdType;
+	int BirdType = 0;
+
 };

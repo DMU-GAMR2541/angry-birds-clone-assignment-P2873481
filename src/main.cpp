@@ -1,11 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
 #include <iostream>
+#include "DynamicObject.h"
 
 int main() {
     // --- 1. WINDOW SETUP ---
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks");
+    sf::RenderWindow window(sf::VideoMode(1200, 800), "Annoyed_Flocks");
     window.setFramerateLimit(60);
+
+    // Set SFML variables
+    sf::Sprite sp_rendered;
+    sf::Texture sf_tex;
 
     //Box2D works in meters. SFML works in pixels.
     const float SCALE = 30.0f;
@@ -87,6 +92,9 @@ int main() {
     sf_ballVisual.setOrigin(15.0f, 15.0f);
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
+    // Creating the first new DynamicObject
+    DynamicObject BaseObject(world, "../assets/Ang_Birds/YellowBird.png", sf::Vector2f(500.0f, 500.0f));
+
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
         sf::Event event;
@@ -118,6 +126,8 @@ int main() {
         sf_ballVisual.setPosition(b2_ballBody->GetPosition().x * SCALE, b2_ballBody->GetPosition().y * SCALE);
         sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));
 
+        BaseObject.Update();
+
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
         sf_wallVisual.setPosition(b2_wallBody->GetPosition().x * SCALE, b2_wallBody->GetPosition().y * SCALE);
@@ -133,6 +143,7 @@ int main() {
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
+        BaseObject.Render(window);
 
         window.display();
     }
