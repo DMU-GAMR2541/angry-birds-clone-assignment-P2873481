@@ -9,5 +9,5 @@ public:
 
 private:
 	int PigHP = 100;
-	
+	int PigType = 0;
 };
