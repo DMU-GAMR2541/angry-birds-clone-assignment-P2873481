@@ -10,7 +10,8 @@ public:
 
 	void Render(sf::RenderWindow& window) override;
 	void Update() override;
-	
+protected:
+	float scale = 30.f;
 private:
 	sf::Sprite sprite;		// The Dynamic Object's sprite
 	b2Vec2 b2Pos;				// Position of object in game world.
@@ -19,7 +20,7 @@ private:
 	b2FixtureDef FixtureDef;	// Defines our fixtures for the object body in Box2D.
 	b2CircleShape BodyShape;	// The shape of the object
 	sf::Texture texture;		// Texture of the object in question
-	float scale = 30.f;
+	
 	const float PI = 3.1415927;
 
 	// int const entityID;			// The overall number ID of the DynamicObject in question.
