@@ -11,8 +11,8 @@
 ///Taken from the GoogleTest primer. 
 /// </summary>
 
-// The fixture for testing class Foo.
-/* class EnemyTest : public testing::Test {
+/* // The fixture for testing class Foo.
+class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<Enemy> enemy;
 protected:
@@ -44,7 +44,7 @@ protected:
     }
 
 
-};
+};*/
 
 class ParamTest : public::testing::TestWithParam<int> {
 protected:
@@ -62,7 +62,7 @@ protected:
     }
 };
 
-//A single test, not a fixture. No setup is called.
+/* //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
     std::cout << e.getHealth() << " " << 100 << std::endl;
@@ -88,15 +88,19 @@ INSTANTIATE_TEST_SUITE_P(
     ParamTest, ::testing::Values(1, 2, 3, 4, 5)
 );*/
 
-class EnemyTest : public testing::Test {
-    EnemyTest() {
+class PigTest : public testing::Test {
+public:
+    std::unique_ptr<Pig> pig;
+protected:
+    PigTest() {
 
     }
-    ~EnemyTest() override {
+    ~PigTest() override {
 
     }
 
     void SetUp() override {
+        
 
     }
 
@@ -106,6 +110,9 @@ class EnemyTest : public testing::Test {
 };
 
 class BirdTest : public testing::Test {
+public:
+    std::unique_ptr<Bird> bird;
+protected:
     BirdTest() {
 
     }
@@ -114,6 +121,7 @@ class BirdTest : public testing::Test {
     }
 
     void SetUp() override {
+        
 
     }
 
