@@ -10,7 +10,7 @@ public:
 	void SetPigScale(float value) {
 		scale = value;
 	}
+
 private:
-	int PigHP = 100;
-	int PigType = 0;
+	float PigHP = 10 * (scale / 10);
 };

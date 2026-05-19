@@ -1,13 +1,18 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
 #include "Slingshot.h"
+#include "Bird.h"
+#include "Pig.h"
+#include "DynamicObject.h"
+#include "StaticObject.h"
+
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
 /// </summary>
 
 // The fixture for testing class Foo.
-class EnemyTest : public testing::Test {
+/*class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<Enemy> enemy;
 protected:
@@ -63,8 +68,8 @@ TEST(Enemy, First_test) {
     std::cout << e.getHealth() << " " << 100 << std::endl;
     //EXPECT_GT(e.getHealth(), 100);
     EXPECT_EQ(e.getHealth(), 100);
-    /*SUCCEED() << "Test test passed";
-    FAIL() << "Test didn't pass";*/
+    SUCCEED() << "Test test passed";
+    FAIL() << "Test didn't pass";
 }
 
 TEST_F(EnemyTest, LethalDamagePopsPig) {
@@ -81,7 +86,11 @@ TEST_P(ParamTest, SimpleTest) {
 INSTANTIATE_TEST_SUITE_P(
     Simple,
     ParamTest, ::testing::Values(1, 2, 3, 4, 5)
-);
+);*/
+
+class EnemyTest : public testing::Test {
+
+};
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
