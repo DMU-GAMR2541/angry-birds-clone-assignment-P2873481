@@ -12,7 +12,7 @@
 /// </summary>
 
 // The fixture for testing class Foo.
-/*class EnemyTest : public testing::Test {
+/* class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<Enemy> enemy;
 protected:
@@ -89,7 +89,37 @@ INSTANTIATE_TEST_SUITE_P(
 );*/
 
 class EnemyTest : public testing::Test {
+    EnemyTest() {
 
+    }
+    ~EnemyTest() override {
+
+    }
+
+    void SetUp() override {
+
+    }
+
+    void TearDown() override {
+
+    }
+};
+
+class BirdTest : public testing::Test {
+    BirdTest() {
+
+    }
+    ~BirdTest() override {
+
+    }
+
+    void SetUp() override {
+
+    }
+
+    void TearDown() override {
+
+    }
 };
 
 int main(int argc, char** argv) {
