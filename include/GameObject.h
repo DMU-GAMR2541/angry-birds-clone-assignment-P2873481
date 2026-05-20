@@ -8,6 +8,7 @@
 class GameObject {
 public:
 	GameObject() = default;
+	~GameObject() = default;
 
 	virtual void Render(sf::RenderWindow& window) = 0;
 	virtual void Update() = 0;

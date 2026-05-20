@@ -5,6 +5,7 @@
 #include "Pig.h"
 #include "DynamicObject.h"
 #include "StaticObject.h"
+#include "GameObject.h"
 
 
 /// <summary>
@@ -129,6 +130,10 @@ protected:
 
     }
 };
+
+TEST(Bird, SpriteTest) {
+
+}
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
