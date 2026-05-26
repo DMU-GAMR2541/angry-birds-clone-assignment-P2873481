@@ -94,7 +94,7 @@ int main() {
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
     // Creating DynamicObjects
-    Bird BirdObject(world, "../assets/Ang_Birds/YellowBirds.png", sf::Vector2f(250.0f, 400.0f), 0.4);
+    Bird BirdObject(world, "../assets/Ang_Birds/YellowBird.png", sf::Vector2f(250.0f, 400.0f), 0.4);
     Pig EnemyPig(world, "../assets/Ang_Birds/BasePig.png", sf::Vector2f(625.0f, 550.0f), 1.0);
     Pig BiggerPig(world, "../assets/Ang_Birds/BasePig.png", sf::Vector2f(715.0f, 550.0f), 1.0);
     BiggerPig.SetPigScale(50.f);
