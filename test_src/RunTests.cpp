@@ -156,15 +156,18 @@ protected:
 TEST(MoveTest, first_test) {
     b2Vec2 b2_gravity(0.0f, 0.0f); // No gravity for testing purposes
     b2World world(b2_gravity);
-    DynamicObject obj(world, ".. / assets / Ang_Birds / YellowBird.png", sf::Vector2(250.0f, 400.0f), 0.4);
+    sf::Vector2 pos = sf::Vector2(250.0f, 400.0f);
+    DynamicObject obj(world, ".. / assets / Ang_Birds / YellowBird.png", pos, 0.4);
 
 
 
     sf::Vector2 newPos = sf::Vector2(550.0f, 400.f);
 
-    std::cout << "Move Object to 550, 400 fro 250. 400" << std::endl;
+    std::cout << "Move Object to 550, 400 from 250, 400" << std::endl;
 
-
+    EXPECT_EQ(newPos.x - pos.x, 300.f);
+    SUCCEED() << "Test successful.";
+    FAIL() << "Test unsuccessful.";
 }
 
 int main(int argc, char** argv) {
