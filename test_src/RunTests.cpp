@@ -1,4 +1,6 @@
 #include <gtest/gtest.h>
+#include <SFML/Graphics.hpp>
+#include <box2d/box2d.h>
 #include "Enemy.h"
 #include "Slingshot.h"
 #include "Bird.h"
@@ -131,7 +133,37 @@ protected:
     }
 };
 
-TEST(Bird, SpriteTest) {
+class MoveTest : public::testing::TestWithParam<int> {
+public:
+    std::unique_ptr<DynamicObject> obj;
+protected:
+    MoveTest() {
+    
+    }
+    ~MoveTest() {
+    
+    }
+
+    void SetUp() {
+
+    }
+
+    void TearDown() {
+
+    }
+};
+
+TEST(MoveTest, first_test) {
+    b2Vec2 b2_gravity(0.0f, 0.0f); // No gravity for testing purposes
+    b2World world(b2_gravity);
+    DynamicObject obj(world, ".. / assets / Ang_Birds / YellowBird.png", sf::Vector2(250.0f, 400.0f), 0.4);
+
+
+
+    sf::Vector2 newPos = sf::Vector2(550.0f, 400.f);
+
+    std::cout << "Move Object to 550, 400 fro 250. 400" << std::endl;
+
 
 }
 
