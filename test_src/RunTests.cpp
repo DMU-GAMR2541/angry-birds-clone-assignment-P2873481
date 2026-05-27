@@ -153,21 +153,23 @@ protected:
     }
 };
 
-TEST(MoveTest, first_test) {
+TEST(MoveTest, array_test) {
     b2Vec2 b2_gravity(0.0f, 0.0f); // No gravity for testing purposes
     b2World world(b2_gravity);
-    sf::Vector2 pos = sf::Vector2(250.0f, 400.0f);
+    sf::Vector2 pos = sf::Vector2(250.0f, 0.0f);
     DynamicObject obj(world, ".. / assets / Ang_Birds / YellowBird.png", pos, 0.4);
 
-
-
-    sf::Vector2 newPos = sf::Vector2(550.0f, 400.f);
-
-    std::cout << "Move Object to 550, 400 from 250, 400" << std::endl;
-
-    EXPECT_EQ(newPos.x - pos.x, 300.f);
-    SUCCEED() << "Test successful.";
-    FAIL() << "Test unsuccessful.";
+    float arr[5]{ 550.f, 110.f, 250.f, 760.f, 1050.f };
+    
+    for (int i = 0; i <= 4; i++) {
+        sf::Vector2 newPos = sf::Vector2(arr[i], 0.f);
+        
+        std::cout << "Move Object to position " << newPos.x << " from " << pos.x << std::endl;
+        
+        ASSERT_NE(newPos.x, pos.x);
+    }
+        
+    
 }
 
 int main(int argc, char** argv) {
