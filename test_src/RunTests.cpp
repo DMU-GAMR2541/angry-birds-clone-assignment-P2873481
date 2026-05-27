@@ -154,22 +154,47 @@ protected:
 };
 
 TEST(MoveTest, array_test) {
-    b2Vec2 b2_gravity(0.0f, 0.0f); // No gravity for testing purposes
-    b2World world(b2_gravity);
     sf::Vector2 pos = sf::Vector2(250.0f, 0.0f);
-    DynamicObject obj(world, ".. / assets / Ang_Birds / YellowBird.png", pos, 0.4);
 
     float arr[5]{ 550.f, 110.f, 250.f, 760.f, 1050.f };
     
     for (int i = 0; i <= 4; i++) {
         sf::Vector2 newPos = sf::Vector2(arr[i], 0.f);
         
-        std::cout << "Move Object to position " << newPos.x << " from " << pos.x << std::endl;
+        std::cout << "TEST: Move Object to position " << newPos.x << " from " << pos.x << std::endl;
         
         ASSERT_NE(newPos.x, pos.x);
     }
         
     
+}
+
+TEST(ParamTest, calc_test) {
+    sf::Vector2 obj1 = sf::Vector2(250.f, 0.f);
+    sf::Vector2 obj2 = sf::Vector2(600.f, 0.f);
+    sf::Vector2 obj3 = sf::Vector2(250.f, -100.f);
+    sf::Vector2 obj4 = sf::Vector2(720.f, 400.f);
+
+    std::cout << "TEST: Primitively comparing object positions between 1: '" << obj1.x << " " << obj1.y << "', 2: '" << obj2.x << " " << obj2.y << "', 3: '"
+        << obj3.x << " " << obj3.y << "' and 4: '" << obj4.x << " " << obj4.y << "'." << std::endl;
+
+    std::cout << "Equal x values between Objects 1 and 3:" << std::endl;
+    EXPECT_EQ(obj1.x, obj3.x);
+
+    std::cout << "Greater x values between 1 and 2" << std::endl;
+    EXPECT_GT(obj2.x, obj1.x);
+
+    std::cout << "Lesser y value between 1 and 3" << std::endl;
+    EXPECT_LT(obj3.y, obj1.y);
+
+    std::cout << "Greater y value between 1 and 4" << std::endl;
+    EXPECT_GT(obj4.y, obj1.y);
+
+    std::cout << "Greater x value between 1 and 4" << std::endl;
+    EXPECT_GT(obj4.x, obj1.x);
+
+    std::cout << "Equal y between 1 and 2" << std::endl;
+    EXPECT_EQ(obj1.y, obj2.y);
 }
 
 int main(int argc, char** argv) {
